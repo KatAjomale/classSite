@@ -97,17 +97,17 @@
                 <table>
                     <tr>
                         <td><label for="contactname">Name:</label></td>
-                        <td><input type="text" name="contactname" id="contactname" /></td>
+                        <td><input type="text" name="contactname" id="contactname" required/></td>
                     </tr>
                     <tr>
                         <td><label for="contactemail">Email:</label></td>
-                        <td><input type="text" name="contactemail" id="contactemail" /></td>
+                        <td><input type="email" name="contactemail" id="contactemail" required/></td>
                     </tr>
                     <tr>
                         <td>Gender:</td>
                         <td>
-                            <label><input type="radio" name="gender" value="male"/>Male</label>
-                            <label><input type="radio" name="gender" value="female" checked/>Female</label>
+                            <label><input type="radio" name="gender" value="male" />Male</label>
+                            <label><input type="radio" name="gender" value="female" checked />Female</label>
                         </td>
                     </tr>
                     <tr>
@@ -122,11 +122,11 @@
                     </tr>
                     <tr>
                         <td><label for="comment">Comment:</label></td>
-                        <td><textarea name="comment" id="comment" cols="18" rows="8"></textarea></td>
+                        <td><textarea name="comment" id="comment" cols="18" rows="8" required></textarea></td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td><input type="submit" name="submit" value="Send Comment"></td>
+                        <!-- <td>&nbsp;</td> -->
+                        <td colspan="2"><input type="submit" name="submit" value="Send Comment"></td>
                     </tr>
                 </table>
             </form>
