@@ -1,6 +1,7 @@
 /**
 *Reset or normalise used to standardise browser display
 **/
+@import url('normalize.css');
 
 /* Redefine existing HTML styles */
 body{
