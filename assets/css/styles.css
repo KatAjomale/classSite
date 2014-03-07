@@ -2,12 +2,12 @@
 *Reset or normalise used to standardise browser display
 **/
 @import url('normalize.css');
-
+/* make for mobile device first. then adjust for tablet. then for desktop*/
 /* Redefine existing HTML styles */
 body{
     font: smaller/160% sans-serif;
     color: #999999;
-    width: 960px;
+
     margin: 0 auto;
 }
 header, footer{
@@ -23,9 +23,9 @@ nav ul{
     margin: 24px 0;
 }
 header li,footer li{
-    width: 140px;
+    width: 46%;
     float: left;
-    margin: 0 10px;
+    margin: 0 2%;
 }
 header a,footer a{
     background-color: #6600FF;
@@ -40,7 +40,7 @@ header a:hover,footer a:hover{
 }
 
 footer li{
-    width: 460px;
+    width: 46%;
 }
 
 footer p{
@@ -50,11 +50,31 @@ footer p{
 /* Class based styles */
 
 div.subsection{
-    width: 460px;
-    padding: 10px;
+    width: 96%;
+    margin: 24px 2%;
     float: left;
 }
 
 /* ID based styles */
 
+/* Medium Screens */
+
+@media(min-width: 768px){
+    nav li{
+        width: 12.66%
+    }
+    footer li{
+        width: 46%;
+    }
+}
+
 /* Style changes for larger displays or devices */
+
+@media(min-width:940px){
+    div.subsection{
+        width: 46%;
+    }
+    body{
+        max-width: 960px;
+    }
+}
