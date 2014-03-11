@@ -1,0 +1,80 @@
+/**
+*Reset or normalise used to standardise browser display
+**/
+@import url('normalize.css');
+/* make for mobile device first. then adjust for tablet. then for desktop*/
+/* Redefine existing HTML styles */
+body{
+    font: smaller/160% sans-serif;
+    color: #999999;
+
+    margin: 0 auto;
+}
+header, footer{
+    clear: both;
+}
+div img{width: 100%;}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    height: 24px;
+    text-align: center;
+    margin: 24px 0;
+}
+header li,footer li{
+    width: 46%;
+    float: left;
+    margin: 0 2%;
+}
+header a,footer a{
+    background-color: #6600FF;
+    display: block;
+    padding: 5px 0;
+    color:  #999999;
+    text-decoration: none;
+}
+header a:hover,footer a:hover{
+    background-color: #999999;
+    color:#6600FF;
+}
+
+footer li{
+    width: 46%;
+}
+
+footer p{
+    padding: 10px;
+}
+
+/* Class based styles */
+
+div.subsection{
+    width: 96%;
+    margin: 24px 2%;
+    float: left;
+}
+
+/* ID based styles */
+
+/* Medium Screens */
+
+@media(min-width: 768px){
+    nav li{
+        width: 12.66%
+    }
+    footer li{
+        width: 46%;
+    }
+}
+
+/* Style changes for larger displays or devices */
+
+@media(min-width:940px){
+    div.subsection{
+        width: 46%;
+    }
+    body{
+        max-width: 960px;
+    }
+}

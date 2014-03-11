@@ -1,80 +1,41 @@
-/**
-*Reset or normalise used to standardise browser display
-**/
-@import url('normalize.css');
-/* make for mobile device first. then adjust for tablet. then for desktop*/
-/* Redefine existing HTML styles */
-body{
-    font: smaller/160% sans-serif;
-    color: #999999;
-
-    margin: 0 auto;
+@import 'reset.css';
+body {
+  color: #4400cc;
+  background-color: #eee5ff;
+  width: 960px;
+  margin: 0 auto;
 }
-header, footer{
-    clear: both;
+header {
+  background-image: -webkit-gradient(linear, #660066, #9966ff);
+  background-image: -webkit-linear-gradient(#660066, #9966ff);
+  background-image: -moz-linear-gradient(#660066, #9966ff);
+  background-image: -ms-linear-gradient(#660066, #9966ff);
+  background-image: -o-linear-gradient(#660066, #9966ff);
+  background-image: linear-gradient(#660066, #9966ff);
 }
-div img{width: 100%;}
-
-nav ul{
-    list-style: none;
-    padding: 0;
-    height: 24px;
-    text-align: center;
-    margin: 24px 0;
+header h1 {
+  color: #eee5ff;
+  font-size: 32px;
 }
-header li,footer li{
-    width: 46%;
-    float: left;
-    margin: 0 2%;
+header nav {
+  background-image: -webkit-gradient(linear, #eee5ff, #4400cc);
+  background-image: -webkit-linear-gradient(#eee5ff, #4400cc);
+  background-image: -moz-linear-gradient(#eee5ff, #4400cc);
+  background-image: -ms-linear-gradient(#eee5ff, #4400cc);
+  background-image: -o-linear-gradient(#eee5ff, #4400cc);
+  background-image: linear-gradient(#eee5ff, #4400cc);
 }
-header a,footer a{
-    background-color: #6600FF;
-    display: block;
-    padding: 5px 0;
-    color:  #999999;
-    text-decoration: none;
+header nav ul {
+  height: 24px;
 }
-header a:hover,footer a:hover{
-    background-color: #999999;
-    color:#6600FF;
+header nav ul li {
+  width: 160px;
+  float: left;
 }
-
-footer li{
-    width: 46%;
-}
-
-footer p{
-    padding: 10px;
-}
-
-/* Class based styles */
-
-div.subsection{
-    width: 96%;
-    margin: 24px 2%;
-    float: left;
-}
-
-/* ID based styles */
-
-/* Medium Screens */
-
-@media(min-width: 768px){
-    nav li{
-        width: 12.66%
-    }
-    footer li{
-        width: 46%;
-    }
-}
-
-/* Style changes for larger displays or devices */
-
-@media(min-width:940px){
-    div.subsection{
-        width: 46%;
-    }
-    body{
-        max-width: 960px;
-    }
+header nav ul li a {
+  color: #4400cc;
+  text-decoration: none;
+  padding: 4px 0;
+  display: block;
+  text-align: center;
 }
