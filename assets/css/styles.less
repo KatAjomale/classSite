@@ -1,48 +1,131 @@
 @import 'reset.css';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
 
-@page: 960px;
-@basecolor: #9966FF;
-@lightcolor: lighten(@basecolor, 25%);
-@darkcolor: darken(@basecolor, 30%);
-@fontsize: 16px;
+/*Mobile device*/
 
-.gradient(@light,@dark){
-  background-image: -webkit-gradient(linear,@light,@dark);
-  background-image: -webkit-linear-gradient(@light,@dark);
-  background-image: -moz-linear-gradient(@light,@dark);
-  background-image: -ms-linear-gradient(@light,@dark);
-  background-image: -o-linear-gradient(@light,@dark);
-  background-image: linear-gradient(@light,@dark);
+@pagesize:480px;
+@basecolor: #663333;
+@lightcolor:lighten(@basecolor, 25%);
+@darkcolor:darken(@basecolor,20%);
+@fontsize:16px;
+.basefont{
+  font:16px/1.5 'Open Sans' ,sans-serif;
+  color: @basecolor;
 }
+
+
 
 body{
-  color: @darkcolor;
-  background-color: @lightcolor;
-  width: @page;
+  .basefont;
+  width: @pagesize;
   margin: 0 auto;
+  font-size:12px;
 }
-
 header{
-  .gradient(#660066,#9966FF);
+  height:64px;
+
   h1{
-  color: @lightcolor;
-    font-size: @fontsize*2;
-}
+
+    font-size: @fontsize*1.5;
+    float:left;
+    width: @pagesize/3.2;
+
+  }
   nav{
-    .gradient(@lightcolor,@darkcolor);
     ul{
-      height: 24px;
+
       li{
-        width: @page/6;
-        float: left;
+        width:55px;
+        float:left;
         a{
-          color: @darkcolor;
           text-decoration: none;
-          padding: 4px 0;
-          display: block;
           text-align: center;
+          padding: 27px 0;
+          display: block;
+          font-size: 10px;
+          background-color: @darkcolor;
+          color: @lightcolor;
         }
       }
     }
   }
 }
+
+div{
+  section.first{
+    img{
+      width:100%;
+      margin: 0 0 16px 0;
+    }
+    h2{
+      font-size: 16px;
+      height:24px;
+      padding: 4px 0;
+    }
+    p{
+      margin: 6px 0;
+
+    }
+  }
+    section.second{
+      h2{
+        font-size: 16px;
+        height:24px;
+        padding: 4px 0;
+      }
+      div.subsection{
+          height: 320px;
+        h3{
+          font-weight: bold;
+          float:right;
+          height:20px;
+          width:@pagesize;
+          text-align: right;
+        }
+        p{
+
+          &.text{
+            float:right;
+            width:@pagesize/1.6;
+            padding: 0 0 16px 20px;
+
+          }
+         &.image{
+           float:right;
+           width:@pagesize/3;
+           height: 270px;
+
+         }
+          img{
+            width:@pagesize/3;
+          }
+           }
+        }
+      }
+        }
+
+footer{
+
+  nav{
+    height: 64px;
+    ul{
+      li{
+        float:left;
+        width: @pagesize/2;
+        a{
+          text-decoration: none;
+          text-align: center;
+          display: block;
+          font-size: 10px;
+          padding:27px 0;
+          background-color: @darkcolor;
+          color: @lightcolor;
+
+        }
+      }
+    }
+  }
+}
+
+
+/* need to change pixel values to multiples of @pagesize before I can easily add the changes for tablets and desktops...*/
