@@ -1,92 +1,122 @@
 @import 'reset.css';
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
 /*Mobile device*/
-.basefont {
-  font: 16px/1.5 'Open Sans', sans-serif;
-  color: #663333;
-}
 body {
-  font: 16px/1.5 'Open Sans', sans-serif;
+  font: 14px/1.5 'Open Sans', sans-serif;
   color: #663333;
-  width: 480px;
+  width: 100%;
   margin: 0 auto;
-  font-size: 12px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 header {
-  height: 64px;
+  background-color: #663333;
 }
 header h1 {
   font-size: 24px;
-  float: left;
-  width: 150px;
-}
-header nav ul li {
-  width: 55px;
-  float: left;
-}
-header nav ul li a {
-  text-decoration: none;
+  padding: 20px;
+  background: #d4aaaa;
   text-align: center;
-  padding: 27px 0;
-  display: block;
-  font-size: 10px;
-  background-color: #221111;
-  color: #b36666;
 }
-div section.first img {
+header nav li {
   width: 100%;
-  margin: 0 0 16px 0;
-}
-div section.first h2 {
-  font-size: 16px;
-  height: 24px;
-  padding: 4px 0;
-}
-div section.first p {
-  margin: 6px 0;
-}
-div section.second h2 {
-  font-size: 16px;
-  height: 24px;
-  padding: 4px 0;
-}
-div section.second div.subsection {
-  height: 320px;
-}
-div section.second div.subsection h3 {
-  font-weight: bold;
-  float: right;
-  height: 20px;
-  width: 480px;
-  text-align: right;
-}
-div section.second div.subsection p.text {
-  float: right;
-  width: 300px;
-  padding: 0 0 16px 20px;
-}
-div section.second div.subsection p.image {
-  float: right;
-  width: 160px;
-  height: 270px;
-}
-div section.second div.subsection p img {
-  width: 160px;
-}
-footer nav {
-  height: 64px;
-}
-footer nav ul li {
-  float: left;
-  width: 240px;
-}
-footer nav ul li a {
-  text-decoration: none;
   text-align: center;
-  display: block;
-  font-size: 10px;
-  padding: 27px 0;
-  background-color: #221111;
-  color: #b36666;
 }
-/* need to change pixel values to multiples of @pagesize before I can easily add the changes for tablets and desktops...*/
+header nav li a {
+  text-decoration: none;
+  padding: 6px 0;
+  display: block;
+  background-color: #663333;
+  color: #cc9999;
+}
+section {
+  clear: both;
+}
+section h2 {
+  font-size: 24px;
+  padding: 24px 0;
+}
+section p img {
+  width: 100%;
+}
+section.second p {
+  margin: 24px 16px;
+}
+footer {
+  clear: both;
+}
+footer li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+footer li a {
+  display: block;
+  padding: 6px 0;
+  background-color: #663333;
+  color: #cc9999;
+  text-decoration: none;
+}
+/* tablets*/
+@media (min-device-width: 481px) {
+  body {
+    font-size: 16px;
+    width: 750px;
+  }
+  header {
+    clear: both;
+  }
+  header h1 {
+    width: 290px;
+    float: left;
+    padding: 34px 20px;
+  }
+  header nav {
+    width: 420px;
+    float: right;
+  }
+  header nav li {
+    width: 140px;
+    float: left;
+  }
+  header nav li a {
+    padding: 14px 0;
+  }
+  section {
+    clear: both;
+  }
+  section.second p {
+    width: 290px;
+    float: left;
+  }
+  section.second p + p {
+    width: 396px;
+    float: right;
+  }
+  section div {
+    clear: both;
+  }
+}
+/*Desktop version*/
+@media (min-device-width: 960px) {
+  body {
+    width: 960px;
+  }
+  header h1 {
+    width: 290px;
+    padding: 8px 20px;
+    text-align: left;
+  }
+  header nav {
+    width: 630px;
+  }
+  header nav li {
+    width: 105px;
+  }
+  section.second p + p {
+    width: 606px;
+  }
+}

@@ -3,129 +3,138 @@
 
 /*Mobile device*/
 
-@pagesize:480px;
+
 @basecolor: #663333;
-@lightcolor:lighten(@basecolor, 25%);
-@darkcolor:darken(@basecolor,20%);
-@fontsize:16px;
-.basefont{
-  font:16px/1.5 'Open Sans' ,sans-serif;
-  color: @basecolor;
-}
-
-
 
 body{
-  .basefont;
-  width: @pagesize;
-  margin: 0 auto;
-  font-size:12px;
+    font:14px/1.5 'Open Sans' ,sans-serif;
+    color: @basecolor;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+h1,h2,h3{
+  font-weight: 600;
 }
 header{
-  height:64px;
-
+  background-color: @basecolor;
   h1{
-
-    font-size: @fontsize*1.5;
-    float:left;
-    width: @pagesize/3.2;
-
+    font-size: 24px;
+    padding: 20px;
+    background: lighten(@basecolor, 45%);
+    text-align: center;
   }
   nav{
-    ul{
-
       li{
-        width:55px;
-        float:left;
+        width:100%;
+        text-align: center;
         a{
           text-decoration: none;
-          text-align: center;
-          padding: 27px 0;
+          padding: 6px 0;
           display: block;
-          font-size: 10px;
-          background-color: @darkcolor;
-          color: @lightcolor;
+          background-color: @basecolor;
+          color: lighten(@basecolor, 40%)
         }
       }
     }
   }
-}
 
-div{
-  section.first{
-    img{
-      width:100%;
-      margin: 0 0 16px 0;
-    }
+  section{
+    clear: both;
     h2{
-      font-size: 16px;
-      height:24px;
-      padding: 4px 0;
+      font-size: 24px;
+      padding: 24px 0;
     }
-    p{
-      margin: 6px 0;
-
-    }
+    p img{
+       width:100%;
+     }
+    &.second p{
+      margin: 24px 16px;
   }
-    section.second{
-      h2{
-        font-size: 16px;
-        height:24px;
-        padding: 4px 0;
-      }
-      div.subsection{
-          height: 320px;
-        h3{
-          font-weight: bold;
-          float:right;
-          height:20px;
-          width:@pagesize;
-          text-align: right;
-        }
-        p{
-
-          &.text{
-            float:right;
-            width:@pagesize/1.6;
-            padding: 0 0 16px 20px;
-
-          }
-         &.image{
-           float:right;
-           width:@pagesize/3;
-           height: 270px;
-
-         }
-          img{
-            width:@pagesize/3;
-          }
-           }
-        }
-      }
-        }
-
-footer{
-
-  nav{
-    height: 64px;
-    ul{
+  }
+    footer{
+      clear:both;
       li{
+        width: 50%;
         float:left;
-        width: @pagesize/2;
+        text-align: center;
         a{
-          text-decoration: none;
-          text-align: center;
           display: block;
-          font-size: 10px;
-          padding:27px 0;
-          background-color: @darkcolor;
-          color: @lightcolor;
-
+          padding: 6px 0;
+          background-color: @basecolor;
+          color: lighten(@basecolor, 40%);
+          text-decoration: none;
         }
+      }
+    }
+
+/* tablets*/
+
+@media(min-device-width: 481px){
+  body{
+  font-size: 16px;
+  width: 750px;
+}
+
+header{
+  clear:both;
+  h1{
+    width:290px;
+    float:left;
+    padding: 34px 20px;
+  }
+  nav{
+    width: 420px;
+    float:right;
+    li{
+      width: 140px;
+      float: left;
+      a{
+        padding: 14px 0;
       }
     }
   }
 }
 
 
-/* need to change pixel values to multiples of @pagesize before I can easily add the changes for tablets and desktops...*/
+section{
+  clear:both;
+  &.second p{
+    width: 290px;
+    float: left;
+  }
+  &.second p+p{
+    width: 396px;
+    float: right;
+  }
+  div{
+    clear: both;
+  }
+}
+}
+
+/*Desktop version*/
+
+@media(min-device-width: 960px){
+  body{
+    width: 960px;
+  }
+  header{
+    h1{
+      width: 290px;
+      padding: 8px 20px;
+      text-align: left;
+    }
+    nav{
+      width: 630px;
+      li{
+        width: 105px;
+      }
+    }
+  }
+  section{
+    &.second p+p{
+      width: 606px;
+    }
+  }
+}
