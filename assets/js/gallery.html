@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Gallery</title>
+    <meta name="viewport" content="width=device-width" initial-scale=1 />
+
+    <script>
+        /*hide the larger images when first loading the page*/
+        function hideItem(element,classname){
+            currElement=document.getElementsByTagName(element);
+            for(j=0;j<currElement.length;j=j+1){
+                if(currElement[j].className == classname){
+                    currElement[j].style.display ='none';
+                }
+            }
+        }
+
+        /*show items on clicking the thumbnail*/
+        oldItem = null;
+        function toggleItem(currID){
+            currItem = document.getElementById(currID).style;
+            if(currItem.display == 'block'){
+                currItem.display = 'none';
+            }else{
+                if(oldItem){
+                    oldItem.display = 'none';
+                }
+                currItem.display = 'block';
+                oldItem = currItem;
+            }
+
+        }
+    </script>
+
+    <style>
+        body{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #page{
+            width: 960px;
+            position: relative;
+            top: 0;
+            right: auto;
+            left: auto;
+        }
+        p img{
+            width: 100%;
+        }
+        .thumbnail{
+            width: 100px;
+        }
+        .hidden{
+            position: absolute;
+            top: 230px;
+            left: 350px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body onload="hideItem('p','hidden preview'),toggleItem('gallone')">
+    <div id="page" class="container">
+        <header>
+            <h1>Example JavaScript Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About us</a></li>
+                    <li><a href="../../portfolio/index.html">Portfolio</a></li>
+                    <li><a href="../../packages/index.html">Packages</a></li>
+                    <li><a href="../../news.html">News</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="content" class="container">
+            <h2>Adele and John's Gallery - Click thumbnail to view</h2>
+
+            <p class="thumbnail">
+                <a href="#" onclick="toggleItem('gallone')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="A&J one"/></a>
+            </p>
+            <p class="hidden preview" id="gallone">
+                <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="A&J one big"/>
+            </p>
+            <p class="thumbnail">
+                <a href="#" onclick="toggleItem('galltwo')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="A&J two"/></a>
+            </p>
+            <p class="hidden preview" id="galltwo">
+                <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="A&J two big"/>
+            </p>
+            <p class="thumbnail">
+                <a href="#" onclick="toggleItem('gallthree')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="A&J three"/></a>
+            </p>
+            <p class="hidden preview" id="gallthree">
+                <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="A&J three big"/>
+            </p>
+            <p class="thumbnail">
+                <a href="#" onclick="toggleItem('gallfour')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="A&J tfour"/></a>
+            </p>
+            <p class="hidden preview" id="gallfour">
+                <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="A&J four big"/>
+            </p>
+        </div>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="../../general/terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="../../general/faq.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Social</a></li>
+                </ul>
+            </nav>
+
+            <p>&copy;Arrow Photography 2014</p>
+        </footer>
+    </div>
+
+</body>
+</html>
