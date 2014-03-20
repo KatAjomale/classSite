@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <title>JQuery and ModernizrGallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="modernizr.custom.10085.js"></script>
+
+    <style>
+        /*quick and easy method but not liked by Internet Explorer*/
+        body{
+            width: 760px;
+            position: relative;
+           margin: 0 auto;
+        }
+        p img{
+            width: 100%;
+        }
+        .thumbnail{
+            width: 100px;
+        }
+        .preview{
+            width: 300px;
+            position: absolute;
+            left: 150px;
+            top: 250px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="page" class="container">
+    <header>
+        <h1>Example JQuery and Modernizr Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About us</a></li>
+                <li><a href="../../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../../packages/index.html">Packages</a></li>
+                <li><a href="../../news.html">News</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content" class="container">
+        <h2>Adele and John's Gallery - Click thumbnail to view</h2>
+
+        <p class="thumbnail">
+            <a href="#" onclick="toggleItem('gallone')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="A&J one"/></a>
+        </p>
+        <p id="first" class="preview">
+            <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="A&J one big"/>
+        </p>
+
+        <p class="thumbnail">
+            <a href="#" onclick="toggleItem('galltwo')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="A&J two"/></a>
+        </p>
+        <p id="second" class="preview">
+            <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="A&J two big"/>
+        </p>
+
+        <p class="thumbnail">
+            <a href="#" onclick="toggleItem('gallthree')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="A&J three"/></a>
+        </p>
+        <p id="third" class="preview">
+            <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="A&J three big"/>
+        </p>
+
+        <p class="thumbnail">
+            <a href="#" onclick="toggleItem('gallfour')"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="A&J tfour"/></a>
+        </p>
+        <p id="fourth" class="preview">
+            <img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="A&J four big"/>
+        </p>
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="../../general/terms.html">Terms &amp; Conditions</a></li>
+                <li><a href="../../general/faq.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Social</a></li>
+            </ul>
+        </nav>
+
+        <p>&copy;Arrow Photography 2014</p>
+    </footer>
+</div>
+
+<script src="jquery-1.11.0.min.js"></script>
+
+   <script>
+       $(document).ready(function(){
+           $('p.preview:not(:first)').hide();
+           $('p.thumbnail a').click(function(){
+               $('p.preview').slideUp(3000);
+               $(this).parent().next().slideDown(3000);
+
+           })
+
+       })
+   </script>
+
+</body>
+</html>
