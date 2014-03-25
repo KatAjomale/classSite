@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta charset="UTF-8" />
     <title>Welcome  to Arrow Photography</title>
+    <script src="assets/js/min/modernizr.min.js"></script>
     <meta name="viewport" content="width: device-width;initial-scale=1" />
     <link href="assets/css/styles.css" rel="stylesheet" />
 
@@ -26,7 +27,13 @@
 
     <div id="content">
         <section class="first">
-            <p><img src="assets/images/ArrowPhotograhyFrontPage1.jpg" alt="Wedding Couple" /></p>
+            <p class="cycle-slideshow" data-cycle-fx="tileSlide">
+                <img src="assets/images/ArrowPhotograhyFrontPage1.jpg" alt="Wedding Couple" />
+            <img src="assets/images/ArrowPhotograhyFrontPage2.jpg" alt="Wedding Couple" />
+            <img src="assets/images/ArrowPhotograhyFrontPage3.jpg" alt="Wedding Couple" />
+            <img src="assets/images/ArrowPhotograhyFrontPage4.jpg" alt="Wedding Couple" />
+            <img src="assets/images/ArrowPhotograhyFrontPage5.jpg" alt="Wedding Couple" />
+            </p>
 
                 <h2>Welcome to Arrow Photography</h2>
 
@@ -101,5 +108,14 @@
          <p>&copy;Arrow Photography 2014</p>
     </footer>
     </div>
+
+    <script src="assets/js/min/jquery.min.js"></script>
+    <script src="assets/js/jquery.cycle2.min.js"></script>
+    <script src="assets/js/min/jquery.cycle2.tile.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slideshow').cycle();
+        })
+    </script>
 </body>
 </html>
