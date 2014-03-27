@@ -7,6 +7,23 @@
     <meta name="viewport" content="width: device-width;initial-scale=1" />
     <link href="assets/css/styles.css" rel="stylesheet" />
 
+    <style>
+        body{
+            width: 960px;
+        }
+        .cycle-slideshow img{
+            width: 100%;
+        }
+        .paragraph{
+            width: 480px;
+            float: left;
+        }
+        .paragraph img{
+
+            width: 458px;
+            height: auto;
+        }
+    </style>
 
 </head>
 <body>
@@ -25,16 +42,17 @@
     </nav>
 </header>
 
-<p class="cycle-slideshow" data-cycle-fx="tileSlide">
+<div class="cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="3000" data-cycle-pause-on-hover="true">
     <img src="assets/images/ArrowPhotograhyFrontPage1.jpg" alt="Wedding Couple" />
     <img src="assets/images/ArrowPhotograhyFrontPage2.jpg" alt="Wedding Couple" />
     <img src="assets/images/ArrowPhotograhyFrontPage3.jpg" alt="Wedding Couple" />
     <img src="assets/images/ArrowPhotograhyFrontPage4.jpg" alt="Wedding Couple" />
     <img src="assets/images/ArrowPhotograhyFrontPage5.jpg" alt="Wedding Couple" />
-</p>
+</div>
 
-<div class="one">
-<p><img src="assets/images/ArrowPhotograhyFrontPage5.jpg" alt="lightbox1" /></p>
+<div class="paragraph">
+<p>
+    <a href="assets/images/ArrowPhotograhyFrontPage5.jpg" class="image" ><img src="assets/images/ArrowPhotograhyFrontPage5.jpg" alt="lightbox1" /></a></p>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at fringilla orci, id lobortis sem. In hac habitasse platea dictumst. Aenean posuere augue quis massa convallis posuere. Quisque viverra ante eu elit ultrices, id scelerisque libero sagittis. Donec at lacinia ligula, et consequat lectus. Integer elementum lorem nec tellus scelerisque, sed ultricies urna venenatis. Vivamus magna sem, volutpat ut lacinia ac, scelerisque at lacus. Cras sed neque quis justo commodo bibendum. In porta interdum sapien, in mollis lorem volutpat et.
 
@@ -47,8 +65,9 @@
 </p>
 </div>
 
-<div class="one">
-<p><img src="assets/images/ArrowPhotograhyFrontPage4.jpg" alt="lightbox2" /></p>
+<div class="paragraph">
+<p>
+    <a href="assets/images/ArrowPhotograhyFrontPage4.jpg" class="image"><img src="assets/images/ArrowPhotograhyFrontPage4.jpg" alt="lightbox2" /></a></p>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at fringilla orci, id lobortis sem. In hac habitasse platea dictumst. Aenean posuere augue quis massa convallis posuere. Quisque viverra ante eu elit ultrices, id scelerisque libero sagittis. Donec at lacinia ligula, et consequat lectus. Integer elementum lorem nec tellus scelerisque, sed ultricies urna venenatis. Vivamus magna sem, volutpat ut lacinia ac, scelerisque at lacus. Cras sed neque quis justo commodo bibendum. In porta interdum sapien, in mollis lorem volutpat et.
 
@@ -60,6 +79,10 @@
     Donec ipsum lectus, imperdiet vel turpis aliquet, consectetur ornare diam. Vestibulum sagittis orci sed elit facilisis venenatis. Vestibulum ullamcorper eros sed erat venenatis posuere et eget erat. Curabitur id ultrices lacus. Aenean malesuada massa non eros convallis, eu porta massa vulputate. Duis elementum risus a tincidunt tristique. Mauris sit amet ultricies lacus. Etiam a tempor justo. Vivamus eros risus, rutrum sed sagittis non, vulputate nec nulla. Donec blandit semper ultrices. Phasellus porta euismod nibh, non pretium lacus. Nullam sed elementum augue. Nullam ac ipsum id odio varius vestibulum et at lorem. Nunc elementum velit ac feugiat volutpat.
 </p>
 </div>
+
+<script src="assets/js/min/jquery.min.js"></script>
+<script src="assets/js/jquery.cycle2.min.js"></script>
+
 
 
 </body>

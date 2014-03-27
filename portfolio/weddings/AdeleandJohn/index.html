@@ -43,7 +43,7 @@
                 eros, vitae accumsan dolor. Duis pulvinar purus urna, ac consequat diam consectetur a.
             </p>
             <p class="gallery" data-item-height-calculation="attribute">
-                <a href="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" rel="prettyPhoto[top]"><img src="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="Adele and John's Wedding" /></a>
+                <a href="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" rel="prettyPhoto"><img src="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="Adele and John's Wedding" /></a>
                 <a href="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding7.jpg" rel="prettyPhoto[top]"><img src="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding7.jpg" alt="Adele and John's Wedding" /></a>
                 <a href="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" rel="prettyPhoto[top]"><img src="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="Adele and John's Wedding" /></a>
                 <a href="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding6.jpg" rel="prettyPhoto[top]"><img src="../../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding6.jpg" alt="Adele and John's Wedding" /></a>
@@ -75,8 +75,13 @@
     <script>
         $(document).ready(function(){
             $('a[rel^="prettyPhoto"]').prettyPhoto({
-                theme:'dark_rounded'
-            });
+                theme:'dark_square'
+
+                });
+        $('.pp_content_container').click(function(){
+            $(this).prettyPhoto.close();
+        })
+
         })
     </script>
 
